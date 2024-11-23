@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Software Engineering Journey - An ISU Story</title>
+    <style>
+        :root {
+            --isu-cardinal: #C8102E;
+            --isu-gold: #F1BE48;
+            --isu-cardinal-dark: #B00E29;
+            --text-color: #333;
+            --bg-light: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: var(--bg-light);
+            color: var(--text-color);
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(200, 16, 46, 0.95);
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: var(--isu-gold);
+            color: var(--isu-cardinal);
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--isu-cardinal), var(--isu-cardinal-dark));
+            color: white;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("assets/ISU_Logo.png") center/cover;
+            opacity: 0.2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--isu-cardinal);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--isu-cardinal);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .quote {
+            font-size: 1.5rem;
+            color: var(--isu-cardinal);
+            font-style: italic;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--isu-gold);
+            margin: 3rem auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--isu-cardinal);
+            font-size: 2.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .artifact-section {
+            background: var(--isu-cardinal);
+            color: white;
+            padding: 4rem 2rem;
+            margin: 3rem 0;
+            border-radius: 15px;
+        }
+
+        .artifact-section h2 {
+            color: var(--isu-gold);
+        }
+
+        .artifact-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 2rem auto;
+            display: block;
+            border: 4px solid var(--isu-gold);
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-links">
+            <a href="#story">My Story</a>
+            <a href="#challenges">Challenges</a>
+            <a href="#growth">Growth</a>
+            <a href="#impact">Impact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>My Software Engineering Journey</h1>
+            <p>A story of growth, challenges, and community at Iowa State University</p>
+        </div>
+    </section>
+
+    <section id="story" class="section">
+        <div class="story-content">
+            <h2>The Beginning</h2>
+            <img src="assets/coover_hall.jpg" alt="Coover Hall" class="featured-image">
+            <p>My journey in software engineering began in the halls of Iowa State University, where each step brought new challenges and opportunities. As a sophomore navigating the complex world of programming, I've discovered that success isn't just about writing code – it's about perseverance, community, and continuous learning.</p>
+            
+            <div class="quote">
+                "The biggest challenge wasn't learning to code – it was learning to believe in myself and embrace the process of growth."
+            </div>
+            
+            <p>Through the support of the ISU community, particularly in the Software Engineering Club and during late-night study sessions in Coover Hall, I found my path forward. Each debugging session and project deadline taught me valuable lessons about resilience and the importance of collaboration.</p>
+        </div>
+    </section>
+
+    <section id="challenges" class="section">
+        <h2>Overcoming Challenges</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Learning Through Struggle</h3>
+                <p>The transition to complex data structures in COMS 2280 tested my resilience. Each debugging session, though frustrating, taught me valuable lessons about patience and analytical thinking. Through persistence and support from mentors, I learned to embrace these challenges as opportunities for growth.</p>
+            </div>
+            <div class="card">
+                <h3>Building Confidence</h3>
+                <p>During my first year, I often questioned whether I belonged in software engineering. Surrounded by peers who seemed to grasp concepts effortlessly, I grappled with self-doubt. The support of mentors and fellow students helped me realize that everyone faces similar doubts on their journey.</p>
+            </div>
+            <div class="card">
+                <h3>Time Management</h3>
+                <p>Balancing coursework with my role on Iowa State's varsity esports team required learning crucial time management skills. Creating the team's analysis program while maintaining academic excellence taught me how to prioritize tasks and work efficiently under pressure.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="growth" class="section">
+        <h2>Growing Through Experience</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Solar Car Team</h3>
+                <img src="assets/solar_car.jpg" alt="Solar Car Team" class="featured-image">
+                <p>As an Embedded Software Developer on Iowa State's Solar Car Team, I work on real-time systems and sensor integration. This experience has allowed me to apply classroom knowledge to practical engineering challenges, working alongside dedicated team members to solve complex problems.</p>
+            </div>
+            <div class="card">
+                <h3>Community Impact</h3>
+                <p>Through SI sessions and the Software Engineering Club, I've found opportunities to help other students facing similar challenges. These experiences have taught me that growth comes not just from overcoming our own challenges, but from helping others overcome theirs as well.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact" class="section">
+        <div class="story-content">
+            <h2>Looking Forward</h2>
+            <p>As I continue my journey at Iowa State, I carry with me the lessons learned from every challenge faced and overcome. The combination of technical knowledge, community support, and personal growth has shaped not just my understanding of software engineering, but my approach to learning and problem-solving.</p>
+            
+            <div class="quote">
+                "Through the ISU community, I discovered that every obstacle was an opportunity to learn and grow stronger."
+            </div>
+            
+            <div class="artifact-section">
+                <h2>My Artifact - Lois Dale Scholarship Award</h2>
+                <img src="assets/Lois_Dale.jpg" alt="Achievement Plaque" class="artifact-image">
+                <p>This plaque represents more than just an achievement - it symbolizes the journey, challenges, and growth I've experienced on my journey. It serves as a reminder that success in software engineering comes through persistence, community support, and dedication to continuous learning.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
